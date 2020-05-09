@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>counter_app</title>
+</head>
+<body>
+  <h1>カウンター</h1>
+  <div id="count_num">0</div>
+  <button id="upbtn">UP</button>
+  <button id="downbtn">DOWN</button>
+
+  <script>
+    var disp_count = document.getElementById("count_num");
+    var up = document.getElementById("upbtn");
+    var down = document.getElementById("downbtn");
+    var count = 0;
+
+    up.addEventListener('click',function(){
+      //addEventListenerでクリックした時にイベントを発生させる
+      count += 1;
+      //innerHTMLでdisp_countのHTMLにcountを表示
+      disp_count.innerHTML = count;
+    })
+    down.addEventListener('click',function(){
+      count -= 1;
+      disp_count.innerHTML = count;
+    })
+
+  </script>
+
+</body>
+</html>
